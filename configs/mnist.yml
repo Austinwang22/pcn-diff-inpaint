@@ -1,0 +1,34 @@
+model: 
+  sde: VP
+  beta_min: 0.1
+  beta_max: 20.
+  num_scales: 1000
+  sampling_eps: 0.001
+  ckpt: 'exp/mnist-train/ckpts/model-10.pt'
+
+train:
+  batchsize: 128
+  num_epoch: 11
+  continuous: True
+  save_step: 5
+  eval_step: 5
+
+optim:
+  lr: 0.0005
+  warmup: 5000
+  grad_clip: 1.
+
+sampling:
+  method: 'pc'
+  predictor: 'euler_maruyama'
+  corrector: 'none'
+  snr: 0.16
+  n_steps_each: 1
+  noise_removal: True
+  probability_flow: True
+  eps: 0.001
+  num_samples: 16
+
+
+log:
+  basedir: mnist-train

@@ -1,7 +1,4 @@
 bin
-*.png
-*.txt
-checkpoints
-.vscode
+exp
 **/__pycache__/**
-data/
+MNIST

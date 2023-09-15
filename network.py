@@ -121,3 +121,4 @@ class ScoreNet(nn.Module):
     # Normalize output
     h = h / self.sde.marginal_prob_std(t)[:, None, None, None]
     return h
+  

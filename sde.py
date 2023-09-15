@@ -121,6 +121,3 @@ class VPSDE(SDE):
     log_mean_coeff = -0.25 * t ** 2 * \
                      (self.beta_max - self.beta_min) - 0.5 * t * self.beta_min
     return torch.sqrt(1. - torch.exp(2. * log_mean_coeff))
-
-
-
