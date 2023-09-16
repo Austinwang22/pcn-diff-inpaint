@@ -76,10 +76,14 @@ def pCN_sample(device, model, sde, start_x, config):
             if i > config.sampling.burn_in:
                 noisy_posterior.append(curr_sample)
                 posterior.append(curr_denoised)
-                
+
         if i == config.sampling.burn_in:
             noisy_posterior.append(curr_sample)
             posterior.append(curr_denoised)
+
+        if i > 0 and i % config.sampling.save_step == 0:
+            save_path = os.path.join(config.sampling.save_path, f'{i}.png')
+            tvu.save_image(curr_denoised, save_path)
 
     noisy_posterior = torch.cat(noisy_posterior)
     posterior = torch.cat(posterior)

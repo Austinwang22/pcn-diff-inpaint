@@ -33,9 +33,11 @@ sampling:
   probability_flow: True
   eps: 0.001
   num_samples: 1
-  beta: 0.5
-  N: 5
-  burn_in: 2
+  beta: 0.3
+  N: 10001
+  burn_in: 9000
+  save_step: 100
+  save_path: 'exp/mcmc-mnist-middle/figs'
 
 
 log:
