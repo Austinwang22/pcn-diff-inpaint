@@ -123,6 +123,7 @@ def subprocess(args):
 
     if config.model.ckpt != 'none':
           model.load_state_dict(torch.load(config.model.ckpt))
+          print('Loading preset weights from {}'.format(config.model.ckpt))
 
     train(model, sde, data_loader, device, config)
 

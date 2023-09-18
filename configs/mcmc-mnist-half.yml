@@ -9,7 +9,7 @@ model:
   beta_max: 20.
   num_scales: 1000
   sampling_eps: 0.001
-  ckpt: 'exp/mnist-train/ckpts/model-10.pt'
+  ckpt: 'exp/mnist-train/ckpts/model-200.pt'
 
 train:
   batchsize: 128
@@ -33,9 +33,9 @@ sampling:
   probability_flow: True
   eps: 0.001
   num_samples: 1
-  beta: 0.3
-  N: 10001
-  burn_in: 9000
+  beta: 0.5
+  N: 701
+  burn_in: 500
   save_step: 100
   save_path: 'exp/mcmc-mnist-half/figs'
 

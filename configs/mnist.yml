@@ -4,14 +4,14 @@ model:
   beta_max: 20.
   num_scales: 1000
   sampling_eps: 0.001
-  ckpt: 'exp/mnist-train/ckpts/model-50.pt'
+  ckpt: 'exp/mnist-train/ckpts/model-200.pt'
 
 train:
   batchsize: 128
-  num_epoch: 51
+  num_epoch: 201
   continuous: True
-  save_step: 10
-  eval_step: 10
+  save_step: 25
+  eval_step: 25
 
 optim:
   lr: 0.0005
