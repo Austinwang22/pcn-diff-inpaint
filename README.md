@@ -1,4 +1,4 @@
-Experiments with score-based generative models and the MNIST dataset.
+Experiments with score-based generative models and the MNIST dataset. Code partially based on [this tutorial](https://colab.research.google.com/drive/120kYYBOVa1i0TD85RjlEkFjaWDxSFUx3?usp=sharing#scrollTo=LZC7wrOvxLdL).
 
 # Train 
 ```bash
