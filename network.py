@@ -3,6 +3,12 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 
+'''
+Code used from the following tutorial:
+
+https://colab.research.google.com/drive/120kYYBOVa1i0TD85RjlEkFjaWDxSFUx3?usp=sharing#scrollTo=PpJSwfyY6mJz
+'''
+
 class GaussianFourierProjection(nn.Module):
   """Gaussian random features for encoding time steps."""  
   def __init__(self, embed_dim, device, scale=30.):
