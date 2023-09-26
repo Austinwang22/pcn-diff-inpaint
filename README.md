@@ -11,7 +11,7 @@ Example (Samples from model):
 
 # Inverse Problems
 ```bash
-python3 train.py --config configs/mcmc-mnist-half.yml
+python3 mcmc.py --config configs/mcmc-mnist-half.yml
 ```
 
 Example Inpainting Results:
